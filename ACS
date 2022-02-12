@@ -104,9 +104,9 @@ btns:Toggle("Unlock All Zones",false, function(bool)
     end
 end)
 
-btns:Seperator()
-
 local btns = serv:Channel("Quests")
+
+btns:Seperator()
 
 btns:Toggle("Auto Do Quests",false, function(bool)
     getgenv().autoquests = bool 
@@ -137,6 +137,8 @@ btns:Toggle("Auto Equip Best Pets",false, function(bool)
     end
 end)
 
+btns:Seperator()
+
 btns:Toggle("Open Egg You're Near",false, function(bool)
     getgenv().singleEgg = bool 
 
@@ -149,6 +151,8 @@ end)
 
 local btns = serv:Channel("Bosses")
 
+btns:Seperator()
+
 btns:Toggle("Autofarm 1st Boss",false, function(bool)
     getgenv().oneboss = bool 
 
@@ -160,6 +164,8 @@ btns:Toggle("Autofarm 1st Boss",false, function(bool)
         end
     end
 end)
+
+btns:Seperator()
 
 btns:Toggle("Autofarm 2nd Boss",false, function(bool)
     getgenv().twoboss = bool 
@@ -176,10 +182,15 @@ end)
 btns:Seperator()
 
 btns:Label("Make sure to have Auto Chakra on.")
+
+btns:Seperator()
+
 btns:Label("Also have your sword equipped.")
 
 
 local btns = serv:Channel("Player")
+
+btns:Seperator()
 
 local sldr = btns:Slider("Walkspeed!", 20, 200, 0, function(t)
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = t
@@ -190,6 +201,8 @@ btns:Seperator()
 local sldr = btns:Slider("JumpPower!", 20, 500, 0, function(t)
 game.Players.LocalPlayer.Character.Humanoid.JumpPower = t
 end)
+
+btns:Seperator()
 
 btns:Toggle("GodMode",false, function(bool)
 	if bool then wait()
@@ -240,6 +253,8 @@ btns:Button("Discord Server", function()
 		})
 	end
 end)
+
+btns:Seperator()
 
 btns:Button("Owner + Scripter", function()
     if setclipboard then 
