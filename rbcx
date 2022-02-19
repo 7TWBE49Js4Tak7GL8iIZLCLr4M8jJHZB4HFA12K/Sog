@@ -1,0 +1,142 @@
+game:GetService("Players").LocalPlayer.Idled:Connect(function()
+    game:GetService("VirtualUser"):ClickButton2(Vector2.new())
+end)
+
+local Player = game:GetService("Players").LocalPlayer
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local isTriple = "Single"
+
+function GetNearestEgg()
+    local nearr = math.huge
+    local near
+    local plr = Player.Character.HumanoidRootPart
+
+    for i, v in pairs(game:GetService("Workspace").Scripts.Eggs:GetChildren()) do
+        if (plr.CFrame.p - v.Egg.Egg.CFrame.p).Magnitude < nearr then
+            near = v.Name
+            nearr = (plr.CFrame.p - v.Egg.Egg.CFrame.p).Magnitude
+        end
+    end
+    return near
+end
+
+local DiscordLib = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/discord%20lib.txt")()
+
+local win = DiscordLib:Window("Soggy Hub")
+
+local serv = win:Server("Rebirth Champions X", "")
+
+local btns = serv:Channel("Main")
+
+local hum = game.Players.LocalPlayer.Character.HumanoidRootPart
+
+btns:Seperator()
+
+btns:Toggle("Auto Clicks",false, function(bool)
+    _G.autoclick = bool
+
+    task.spawn(function()
+        while task.wait() do
+            if not _G.autoclick then break end
+            ReplicatedStorage.Events.Click:FireServer()
+        end
+    end)
+end)
+
+btns:Seperator()
+
+local btns = serv:Channel("Eggs")
+
+btns:Seperator()
+
+btns:Toggle("Open Nearest Egg",false, function(bool)
+    _G.autoegg = bool
+
+    task.spawn(function()
+        while task.wait() do
+            if not _G.autoegg then break end    
+            local eggy = GetNearestEgg() 
+            ReplicatedStorage.Functions.Unbox:InvokeServer(eggy,isTriple)
+        end
+    end)
+end)
+
+btns:Seperator()
+
+btns:Toggle("Triple Egg",false, function(bool)
+    asd = bool
+
+    if asd then
+        isTriple = "Triple"
+    else
+        isTriple = "Single"
+    end
+end)
+
+btns:Seperator()
+
+btns:Toggle("Equip Best",false, function(bool)
+    _G.autobest = bool
+
+    task.spawn(function()
+        while task.wait(10) do
+            if not _G.autobest then break end
+            firesignal(Player.PlayerGui.MainUI.PetsFrame.Additional.EquipBest.Click.MouseButton1Up)
+        end
+    end)
+end)
+
+btns:Seperator()
+
+btns:Toggle("Craft All Pets",false, function(bool)
+    _G.autocraft = bool
+
+    task.spawn(function()
+        while task.wait(3) do
+            if not _G.autocraft then break end
+            firesignal(Player.PlayerGui.MainUI.PetsFrame.Additional.CraftAll.Click.MouseButton1Up)
+        end
+    end)
+end)
+
+btns:Seperator()
+
+btns:Toggle("Auto Update",false, function(bool)
+    _G.autoupgrade = bool
+
+    task.spawn(function()
+        while task.wait() do
+            if not _G.autoupgrade then break end
+            for i, v in pairs(require(ReplicatedStorage.Modules.UpgradesShop)) do
+                ReplicatedStorage.Functions.Upgrade:InvokeServer(tostring(i))
+            end
+        end
+    end)
+end)
+
+local btns = serv:Channel("Gamepasses")
+
+btns:Seperator()
+
+btns:Button("Unlock Gamepasses", function()
+    for i, v in pairs(Player.Passes:GetChildren()) do
+        v.Value = true
+    end
+end)
+
+local btns = serv:Channel("Misc")
+
+btns:Seperator()
+
+btns:Toggle("Auto Buy Potions",false, function(bool)
+    _G.autopotion = bool
+
+    task.spawn(function()
+        while task.wait() do
+            if not _G.autopotion then break end
+            for i, v in pairs(require(ReplicatedStorage.Modules.Potions)) do
+                ReplicatedStorage.Events.Potion:FireServer(tostring(i))
+            end
+        end
+    end)
+end)
