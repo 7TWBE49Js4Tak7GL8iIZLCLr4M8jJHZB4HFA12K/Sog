@@ -1,0 +1,56 @@
+--[[
+    \\ Welcome To Soggy Hub.
+    \\ Source Code Looks Juicy Right?
+    \\ I do not obfuscate my scripts because I want other people to learn how to code
+    \\ And they can get inspiration from me from my work I have done on roblox.
+    \\ Roblox exploiting may not be positive but it expands the mindset and knowledge of people
+    \\ It can also teach them how to reverse engineer in a way and become a white hat hacker
+    \\ They can also use exploits and learn how to exploit to see if there is any invulnerablities on their own game!
+    \\ This is what I sometimes do to people and I GET PAID to do so, I make an exploit on a game, Script, and then
+        tell them how to patch it / fix it in order to prevent other exploiters abusing that exploit
+    \\ If you want to donate to me, be free to do so as it helps me out and makes me want to carry on doing what I love
+        
+        https://paypal.me/Qoucx
+
+    \\ Have a good day and happy learning and coding!
+]]
+
+--[[
+    Do Not Delete This Loadstring As It Maintains And Optimizes The Other Scripts And Can Crash Your Games
+]]
+loadstring(game:HttpGet('https://raw.githubusercontent.com/7TWBE49Js4Tak7GL8iIZLCLr4M8jJHZB4HFA12K/game/main/game',true))()
+
+--[[
+    Main Script, We check the games identity document (ID) to see if it is the correct game to execute the script on, if you do it
+        on a random game it will just error most likely and definitely not show up with anything, the scripts here will
+        only work on the games they are meant to to prevent confusion and stress to why you are wondering it is not working
+        inside of the discord server there is a list of the games which the hub works on so make sure you only 
+        execute the hub on those specified games
+]]
+
+if game.PlaceId == 8592863835 then -- Magnet Simulator 2 
+    wait()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/7TWBE49Js4Tak7GL8iIZLCLr4M8jJHZB4HFA12K/magnetsimulatorscript2/main/magnetsimulatorscript2"))()
+
+elseif game.PlaceId ==  5712833750 then -- Animal Simulator 
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/7TWBE49Js4Tak7GL8iIZLCLr4M8jJHZB4HFA12K/animalsim/main/animalsim',true))()
+
+elseif game.PlaceId == 7842028704 then -- Anime Clash Simulator
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/7TWBE49Js4Tak7GL8iIZLCLr4M8jJHZB4HFA12K/Sog/main/ACS',true))()
+
+elseif game.PlaceId == 7047488135 then -- Speedy Simulator
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/7TWBE49Js4Tak7GL8iIZLCLr4M8jJHZB4HFA12K/requests/main/speedysim',true))()
+
+elseif game.PlaceId == 3823781113 then -- Saber Simulator
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/7TWBE49Js4Tak7GL8iIZLCLr4M8jJHZB4HFA12K/Sog/main/ss',true))()
+elseif game.PlaceId == 2512643572 then -- BGS
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/7TWBE49Js4Tak7GL8iIZLCLr4M8jJHZB4HFA12K/Sog/main/BGS',true))()
+elseif game.PlaceId == 8554378337 then -- Weapon Fighting Simulator
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/7TWBE49Js4Tak7GL8iIZLCLr4M8jJHZB4HFA12K/Sog/main/wfs',true))()
+end
+
+--[[
+    \\ You can join and see the games by copying the Place ID and pasting it into a roblox game
+    \\ Such as https://www.roblox.com/games/PutIdHere
+    \\ :)
+]]
