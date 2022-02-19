@@ -1,5 +1,3 @@
-loadstring(game:HttpGet('https://raw.githubusercontent.com/7TWBE49Js4Tak7GL8iIZLCLr4M8jJHZB4HFA12K/game/main/game',true))()
-
 local DiscordLib = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/discord%20lib.txt")()
 
 local win = DiscordLib:Window("Soggy Hub ")
