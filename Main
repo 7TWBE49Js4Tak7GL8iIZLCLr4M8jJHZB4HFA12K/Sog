@@ -9,16 +9,13 @@
     \\ This is what I sometimes do to people and I GET PAID to do so, I make an exploit on a game, Script, and then
         tell them how to patch it / fix it in order to prevent other exploiters abusing that exploit
     \\ If you want to donate to me, be free to do so as it helps me out and makes me want to carry on doing what I love
-        
+    \\ Yes I do take inspiration from other peoples scripts, if you want credit just create a ticket in my discord
+        server and let me know so I can give you that credit.
+    
         https://paypal.me/Qoucx
 
     \\ Have a good day and happy learning and coding!
 ]]
-
---[[
-    Do Not Delete This Loadstring As It Maintains And Optimizes The Other Scripts And Can Crash Your Games
-]]
-loadstring(game:HttpGet('https://raw.githubusercontent.com/7TWBE49Js4Tak7GL8iIZLCLr4M8jJHZB4HFA12K/game/main/game',true))()
 
 --[[
     Main Script, We check the games identity document (ID) to see if it is the correct game to execute the script on, if you do it
@@ -47,7 +44,23 @@ elseif game.PlaceId == 2512643572 then -- BGS
     loadstring(game:HttpGet('https://raw.githubusercontent.com/7TWBE49Js4Tak7GL8iIZLCLr4M8jJHZB4HFA12K/Sog/main/BGS',true))()
 elseif game.PlaceId == 8554378337 then -- Weapon Fighting Simulator
     loadstring(game:HttpGet('https://raw.githubusercontent.com/7TWBE49Js4Tak7GL8iIZLCLr4M8jJHZB4HFA12K/Sog/main/wfs',true))()
+elseif game.PlaceId == 8540346411 then -- Rebirth Champions X 
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/7TWBE49Js4Tak7GL8iIZLCLr4M8jJHZB4HFA12K/Sog/main/rbcx',true))()
+
+
+
+
+
+
 end
+
+--[[
+    -- Main Script For Loading All The Scripts
+
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/7TWBE49Js4Tak7GL8iIZLCLr4M8jJHZB4HFA12K/Sog/main/Main',true))()
+    
+
+]]
 
 --[[
     \\ You can join and see the games by copying the Place ID and pasting it into a roblox game
