@@ -28,16 +28,12 @@
 if game.PlaceId == 8592863835 then -- Magnet Simulator 2 
     wait()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/7TWBE49Js4Tak7GL8iIZLCLr4M8jJHZB4HFA12K/magnetsimulatorscript2/main/magnetsimulatorscript2"))()
-
 elseif game.PlaceId ==  5712833750 then -- Animal Simulator 
     loadstring(game:HttpGet('https://raw.githubusercontent.com/7TWBE49Js4Tak7GL8iIZLCLr4M8jJHZB4HFA12K/animalsim/main/animalsim',true))()
-
 elseif game.PlaceId == 7842028704 then -- Anime Clash Simulator
     loadstring(game:HttpGet('https://raw.githubusercontent.com/7TWBE49Js4Tak7GL8iIZLCLr4M8jJHZB4HFA12K/Sog/main/ACS',true))()
-
 elseif game.PlaceId == 7047488135 then -- Speedy Simulator
     loadstring(game:HttpGet('https://raw.githubusercontent.com/7TWBE49Js4Tak7GL8iIZLCLr4M8jJHZB4HFA12K/requests/main/speedysim',true))()
-
 elseif game.PlaceId == 3823781113 then -- Saber Simulator
     loadstring(game:HttpGet('https://raw.githubusercontent.com/7TWBE49Js4Tak7GL8iIZLCLr4M8jJHZB4HFA12K/Sog/main/ss',true))()
 elseif game.PlaceId == 2512643572 then -- BGS
@@ -46,7 +42,8 @@ elseif game.PlaceId == 8554378337 then -- Weapon Fighting Simulator
     loadstring(game:HttpGet('https://raw.githubusercontent.com/7TWBE49Js4Tak7GL8iIZLCLr4M8jJHZB4HFA12K/Sog/main/wfs',true))()
 elseif game.PlaceId == 8540346411 then -- Rebirth Champions X 
     loadstring(game:HttpGet('https://raw.githubusercontent.com/7TWBE49Js4Tak7GL8iIZLCLr4M8jJHZB4HFA12K/Sog/main/rbcx',true))()
-
+elseif game.PlaceId == 8288069630 then -- Stone Miner Simulator 
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/7TWBE49Js4Tak7GL8iIZLCLr4M8jJHZB4HFA12K/Sog/main/sms',true))()
 
 
 
