@@ -1,0 +1,88 @@
+local DiscordLib = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/discord%20lib.txt")()
+
+local win = DiscordLib:Window("Soggy Hub V2 | sunken#0001 | Last Update 13/02/22")
+
+local serv = win:Server("Stone Miner Simulator", "")
+
+local btns = serv:Channel("Main")
+
+local hum = game.Players.LocalPlayer.Character.HumanoidRootPart
+
+wait(3)
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+
+btns:Seperator()
+
+btns:Toggle("Infinite Boosts",false, function(bool)
+    getgenv().infiniteboosts = bool
+
+    while infiniteboosts do wait()
+        local args = {
+            [1] = "ItemBuff",
+            [2] = {
+                ["script"] = "Client_CapacityItem",
+                ["id"] = "capacity",
+                ["desc"] = "item_capacity_desc",
+                ["name"] = "item_capacity_name",
+                ["weight"] = 100,
+                ["price"] = 10,
+                ["time"] = 9999999999999,
+                ["icon"] = "rbxassetid://8526175271",
+                ["model"] = "capacity"
+            }
+        }
+
+        game:GetService("ReplicatedStorage").RemoteFunction:InvokeServer(unpack(args))
+        wait()
+        local args = {
+            [1] = "ItemBuff",
+            [2] = {
+                ["script"] = "Client_PowerItem",
+                ["id"] = "power",
+                ["name"] = "item_power_name",
+                ["weight"] = 100,
+                ["price"] = 10,
+                ["time"] = 9999999999999,
+                ["icon"] = "rbxassetid://8526175271",
+                ["model"] = "power"
+            }
+        }
+
+        game:GetService("ReplicatedStorage").RemoteFunction:InvokeServer(unpack(args))
+        wait()
+        local args = {
+            [1] = "ItemBuff",
+            [2] = {
+                ["script"] = "Client_WidenItem",
+                ["id"] = "widen",
+                ["name"] = "item_widen_name",
+                ["weight"] = 100,
+                ["price"] = 10,
+                ["time"] = 9999999999999,
+                ["icon"] = "rbxassetid://8526175271",
+                ["model"] = "widen"
+            }
+        }
+
+        game:GetService("ReplicatedStorage").RemoteFunction:InvokeServer(unpack(args))
+        local args = {
+            [1] = "ItemBuff",
+            [2] = {
+                ["script"] = "Client_MagnetItem",
+                ["id"] = "magnet",
+                ["name"] = "item_magnet_name",
+                ["weight"] = 100,
+                ["price"] = 10,
+                ["time"] = 9999999999999,
+                ["icon"] = "rbxassetid://8526175271",
+                ["model"] = "magnet"
+            }
+        }
+
+        game:GetService("ReplicatedStorage").RemoteFunction:InvokeServer(unpack(args))
+    end
+end)
+
+btns:Seperator()
+
+btns:Label("Autofarm Soon.")
