@@ -1,0 +1,229 @@
+local DiscordLib = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/discord%20lib.txt")()
+
+local win = DiscordLib:Window("Soggy Hub ")
+
+local serv = win:Server("Box Simulator", "")
+
+local btns = serv:Channel("Auto Farm")
+
+local hum = game.Players.LocalPlayer.Character.HumanoidRootPart
+
+btns:Seperator()
+
+btns:Toggle("Auto Farm Spawn",false, function(bool)
+    getgenv().spawnfarm = bool
+
+    while spawnfarm do wait()
+        for i,v in pairs(game:GetService("Workspace").Map.Worlds.Spawn.Spawn.Boxes:GetDescendants()) do 
+            if v:IsA"MeshPart" then 
+                fireclickdetector(v.ClickDetector)
+                hum.CFrame = v.CFrame
+                if v.Health == 0 then break end
+            end
+        end
+    end
+end)
+
+btns:Seperator()
+
+btns:Toggle("Auto Farm Beach",false, function(bool)
+    getgenv().beachfarm = bool
+
+    while beachfarm do wait()
+        for i,v in pairs(game:GetService("Workspace").Map.Worlds.Spawn.Beach.Boxes:GetDescendants()) do 
+            if v:IsA"MeshPart" then 
+                fireclickdetector(v.ClickDetector)
+                hum.CFrame = v.CFrame
+                if v.Health == 0 then break end
+            end
+        end
+    end
+end)
+
+btns:Seperator()
+
+btns:Toggle("Auto Farm Samurai",false, function(bool)
+    getgenv().samfarm = bool
+
+    while samfarm do wait()
+        for i,v in pairs(game:GetService("Workspace").Map.Worlds.Spawn.Samurai.Boxes:GetDescendants()) do 
+            if v:IsA"MeshPart" then 
+                fireclickdetector(v.ClickDetector)
+                hum.CFrame = v.CFrame
+                if v.Health == 0 then break end
+            end
+        end
+    end
+end)
+
+btns:Seperator()
+
+btns:Toggle("Auto Farm Desert",false, function(bool)
+    getgenv().desert = bool
+
+    while desert do wait()
+        for i,v in pairs(game:GetService("Workspace").Map.Worlds.Spawn.Desert.Boxes:GetDescendants()) do 
+            if v:IsA"MeshPart" then 
+                fireclickdetector(v.ClickDetector)
+                hum.CFrame = v.CFrame
+                if v.Health == 0 then break end
+            end
+        end
+    end
+end)
+
+btns:Seperator()
+
+btns:Toggle("Auto Farm Winter",false, function(bool)
+    getgenv().winfarm = bool
+
+    while winfarm do wait()
+        for i,v in pairs(game:GetService("Workspace").Map.Worlds.Spawn.Winter.Boxes:GetDescendants()) do 
+            if v:IsA"MeshPart" then 
+                fireclickdetector(v.ClickDetector)
+                hum.CFrame = v.CFrame
+                if v.Health == 0 then break end
+            end
+        end
+    end
+end)
+
+
+btns:Seperator()
+
+btns:Toggle("Auto Farm Wizard",false, function(bool)
+    getgenv().wizfarm = bool
+
+    while wizfarm do wait()
+        for i,v in pairs(game:GetService("Workspace").Map.Worlds.Spawn.Wizard.Boxes:GetDescendants()) do 
+            if v:IsA"MeshPart" then 
+                fireclickdetector(v.ClickDetector)
+                hum.CFrame = v.CFrame
+                if v.Health == 0 then break end
+            end
+        end
+    end
+end)
+
+btns:Seperator()
+
+btns:Toggle("Auto Farm Volcano",false, function(bool)
+    getgenv().volc = bool
+
+    while volc do wait()
+        for i,v in pairs(game:GetService("Workspace").Map.Worlds.Spawn.Volcano.Boxes:GetDescendants()) do 
+            if v:IsA"MeshPart" then 
+                fireclickdetector(v.ClickDetector)
+                hum.CFrame = v.CFrame
+                if v.Health == 0 then break end
+            end
+        end
+    end
+end)
+
+btns:Seperator()
+
+btns:Toggle("Auto Farm Mine",false, function(bool)
+    getgenv().min = bool
+
+    while min do wait()
+        for i,v in pairs(game:GetService("Workspace").Map.Worlds.Spawn.Mine.Boxes:GetDescendants()) do 
+            if v:IsA"MeshPart" then 
+                fireclickdetector(v.ClickDetector)
+                hum.CFrame = v.CFrame
+                if v.Health == 0 then break end
+            end
+        end
+    end
+end)
+
+btns:Seperator()
+
+btns:Toggle("Auto Farm Mushroom",false, function(bool)
+    getgenv().Mushroomf = bool
+
+    while Mushroomf do wait()
+        for i,v in pairs(game:GetService("Workspace").Map.Worlds.Spawn.Mushroom.Boxes:GetDescendants()) do 
+            if v:IsA"MeshPart" then 
+                fireclickdetector(v.ClickDetector)
+                hum.CFrame = v.CFrame
+                if v.Health == 0 then break end
+            end
+        end
+    end
+end)
+
+btns:Seperator()
+
+btns:Toggle("Auto Farm Ocean",false, function(bool)
+    getgenv().Oceanf = bool
+
+    while Oceanf do wait()
+        for i,v in pairs(game:GetService("Workspace").Map.Worlds.Spawn.Ocean.Boxes:GetDescendants()) do 
+            if v:IsA"MeshPart" then 
+                fireclickdetector(v.ClickDetector)
+                hum.CFrame = v.CFrame
+                if v.Health == 0 then break end
+            end
+        end
+    end
+end)
+
+btns:Seperator()
+
+btns:Toggle("Auto Farm Ancient Portal",false, function(bool)
+    getgenv().Oceanf = bool
+
+    while Oceanf do wait()
+        for i,v in pairs(game:GetService("Workspace").Map.Worlds.Spawn["Ancient Portal"].Boxes:GetDescendants()) do 
+            if v:IsA"MeshPart" then 
+                fireclickdetector(v.ClickDetector)
+                hum.CFrame = v.CFrame
+                if v.Health == 0 then break end
+            end
+        end
+    end
+end)
+
+local btns = serv:Channel("Auto Buy")
+
+btns:Seperator()
+
+btns:Toggle("Auto Buy Tools",false, function(bool)
+    getgenv().autobuytools = bool 
+
+    while autobuytools do wait()
+        for i,v in pairs(game:GetService("ReplicatedStorage").GameAssets.Tools:GetChildren()) do 
+            wait()
+            local args = {
+                [1] = (v.Name),
+            }
+
+            game:GetService("ReplicatedStorage").Network.Tool:InvokeServer(unpack(args))
+        end
+    end
+end)
+
+local btns = serv:Channel("Misc")
+
+btns:Seperator()
+
+btns:Toggle("Unlock All Worlds",false, function(bool)
+    game:GetService("Workspace").Map.Gates:Destroy()
+end)
+
+btns:Seperator()
+
+btns:Toggle("Auto Collect Chests",false, function(bool)
+    getgenv().autochests = bool 
+
+    while autochests do wait()
+        for i,v in pairs(game:GetService("Workspace").Map.Rewards:GetDescendants()) do 
+            if v.Name == "TouchInterest" and v.Parent then 
+
+                firetouchinterest(hum, v.Parent, 0)
+                firetouchinterest(hum, v.Parent, 1)
+            end
+        end
+    end
+end)
